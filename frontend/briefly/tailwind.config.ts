@@ -9,7 +9,8 @@ const config: Config = {
   theme: {
     fontFamily: {
       custom: "'Lobster', sans-serif",
-      default: "'Roboto Slab', serif"
+      default: "'Roboto Slab', serif",
+      code: "'Source Code Pro', monospace"
     },
     extend: {
       backgroundImage: {
