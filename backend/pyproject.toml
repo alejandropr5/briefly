@@ -15,6 +15,7 @@ python-multipart = "^0.0.6"
 openai-whisper = {git = "https://github.com/openai/whisper.git"}
 torch = "^2.1.1"
 transformers = "^4.36.0"
+scipy = "^1.11.4"
 
 
 [build-system]

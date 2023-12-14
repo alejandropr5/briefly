@@ -7,6 +7,7 @@ export function DropZone () {
   const [urlObj, setUrlObj] = useState<string>("")
   const [loading, setLoading] = useState<boolean>(false)
   const [resultAvailable, setResultAvailable] = useState<boolean>(false)
+  const [result, setResult] = useState<string>("")
 
 
   async function handleSubmit (e: React.SyntheticEvent) {
@@ -22,12 +23,18 @@ export function DropZone () {
         body: formData,
         redirect: 'follow'
       })
-        .then(response => response.text())
+        .then(response => response.json())
         .then(result => {
           setResultAvailable(true)
-          console.log(result)
+          setResult(result.summary)
+          console.log(result.summary)
         })
-        .catch(error => console.log('error', error))
+        .catch(error => {
+          setResultAvailable(false)
+          setLoading(false)
+          setFile(undefined)
+          console.log('error', error)
+        })
     }
   }
 
@@ -74,7 +81,7 @@ export function DropZone () {
           <div className="relative w-full items-center block max-w-sm p-6 bg-white border border-gray-100 rounded-lg shadow-md">
               <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 opacity-20">Summary of {file.name}</h5>
               {resultAvailable ? (
-                <p className="font-normal text-gray-700">{"Hello"}</p>
+                <p className="font-normal text-gray-700">{result}</p>
               )
               : (
               <div role="status" className="absolute -translate-x-1/2 -translate-y-1/2 top-2/4 left-1/2">
