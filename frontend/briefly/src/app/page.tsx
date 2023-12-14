@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <main className="flex h-full min-h-screen min-w-screen flex-col items-center bg-[#e6e0f4]">
       <CustomHeader/>
-      <div className="flex flex-col grow h-full items-center justify-between px-16 m-8 max-w-6xl w-full space-y-5">
+      <div className="flex flex-col grow h-full items-center justify-between px-16 lx:m-8 max-w-6xl w-full space-y-5">
         <div className="flex flex-col  w-full pb-6 items-center justify-between text-[#232833] font-sans space-y-3">
           <h1 className="text-[50px] font-bold">
             <center> 
