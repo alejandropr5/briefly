@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "briefly-api"
+version = "0.1.0"
+description = ""
+authors = ["alejandropr05 <alejandropr05@hotmail.com>"]
+readme = "README.md"
+packages = [{include = "briefly_api"}]
+
+[tool.poetry.dependencies]
+python = ">3.9, <3.12"
+fastapi = "^0.105.0"
+fastapi-utils = "^0.2.1"
+uvicorn = "^0.24.0.post1"
+python-multipart = "^0.0.6"
+openai-whisper = {git = "https://github.com/openai/whisper.git"}
+torch = "^2.1.1"
+transformers = "^4.36.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
