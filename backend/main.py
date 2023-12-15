@@ -58,9 +58,9 @@ async def summarize(file: Annotated[bytes, File()], model=Depends(get_model)):
                                        truncation=True)
 
     outputs = model["transformer"].generate(inputs,
-                                            max_length=150,
-                                            min_length=80,
-                                            length_penalty=5.0,
+                                            max_length=400,
+                                            min_length=150,
+                                            length_penalty=3.0,
                                             num_beams=2)
 
     summary = model["tokenizer"].decode(outputs[0][1:-1])
