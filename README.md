@@ -4,13 +4,13 @@ In educational, work or personal environments, we often face the difficulty of m
 
 The app uses OpenAI's Whisper to perform high-quality transcriptions, ensuring accurate representation of spoken content in audio files. It then uses the Transformer T5 model to generate concise but informative summaries, capturing key points and highlighting essential information.
 
-# Used models
+## Used models
 
 ## Whisper
 
 [Whisper](https://github.com/openai/whisper) is a model developed by OpenAI designed specifically to perform audio transcription tasks. Its architecture consists of an encoder-decoder transformer that takes audio log-Mel spectrograms as input.
 
-### Available Models
+#### Available Models
 
 There are five available models offered by OpenAI, of which four are English-only. Each model differs from the other in terms of speed and accuracy.
 
@@ -23,12 +23,12 @@ There are five available models offered by OpenAI, of which four are English-onl
 | medium |   769 M    |    `medium.en`     |      `medium`      |     ~5 GB     |      ~2x       |
 | large  |   1550 M   |        N/A         |      `large`       |    ~10 GB     |       1x       |
 
-## Transformer T5
+### Transformer T5
 
 Transformer T5, presented in [Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer](https://arxiv.org/pdf/1910.10683.pdf), is a unified approach for all Natural Language Processing (NLP) tasks, using a text-to-text format, where the input and output are text strings. “T5” refers to the core functionality of the model, which is called “**T**ext-**t**o-**T**ext **T**ransfer **T**ransformer”. 
 
 T5 is an encoder-decoder model that converts all NLP problems into this format. It is trained with "teacher forcing", requiring an input sequence and a target sequence for training. The model can be trained or tuned in a supervised or unsupervised manner.
 
-### Tasks
+#### Tasks
 
 Each task considered (including translation, question answering, and classification) is cast as feeding the model text as input and train it to generate a target text. This allows the same model, loss function, hyperparameters, etc. to be used in this diverse set of tasks.
