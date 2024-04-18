@@ -1,3 +1,5 @@
+# Briefly: AI-powered audio briefly transcriptions
+
 In educational, work or personal environments, we often face the difficulty of managing long audios, such as classes or meetings, whose content exceeds our available time to listen to them in their entirety. This results in a loss of valuable information and can affect the comprehensive understanding of the subject matter. “Briefly” addresses this problem by offering an effective solution that allows users to receive audio files, accurately transcribe them, and then generate automatic summaries.
 
 The app uses OpenAI's Whisper to perform high-quality transcriptions, ensuring accurate representation of spoken content in audio files. It then uses the Transformer T5 model to generate concise but informative summaries, capturing key points and highlighting essential information.
